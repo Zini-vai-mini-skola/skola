@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pieteikties — Rūtiņa</title>
+<meta name="description" content="Anketa pirms pirmās nodarbības: klase, priekšmets, mērķis un vēlamais laiks. Pirmā nodarbība bez maksas.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23EFF2F7'/><path d='M0 10.5h32M0 21.5h32M10.5 0v32M21.5 0v32' stroke='%232743C7' stroke-width='2'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stils.css">
+</head>
+<body>
+
+<header class="galvene">
+  <div class="ietvars galvene__saturs">
+    <a class="zimols" href="index.html">
+      <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" fill="none" stroke="#16203A" stroke-width="2"/>
+        <path d="M1 11h30M1 21h30M11 1v30M21 1v30" stroke="#2743C7" stroke-width="1.5"/>
+      </svg>
+      <span data-vards>Rūtiņa</span>
+    </a>
+    <nav class="navigacija" aria-label="Galvenā izvēlne">
+      <a href="index.html">Sākums</a>
+      <a href="par-mums.html">Ko piedāvājam</a>
+      <a href="pieteikties.html" aria-current="page">Pieteikties</a>
+      <a href="kontakti.html">Kontakti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="ietvars">
+
+  <section class="bloks">
+    <div class="zime mono"><span>Anketa</span><span>~3 min</span></div>
+    <div>
+      <h1>Anketa pirms pirmās nodarbības</h1>
+      <p>
+        Jo vairāk uzrakstīsiet, jo mērķtiecīgāka būs pirmā nodarbība. Pēc anketas
+        saņemšanas atbildam vienas darbdienas laikā un piedāvājam brīvos laikus.
+        Pirmā nodarbība ir bez maksas.
+      </p>
+
+      <form class="forma" id="anketa" novalidate>
+
+        <fieldset>
+          <legend>Skolēns</legend>
+
+          <div class="lauks">
+            <label for="vards">Skolēna vārds</label>
+            <input type="text" id="vards" name="vards" autocomplete="given-name" required>
+          </div>
+
+          <div class="lauks">
+            <label for="klase">Klase</label>
+            <select id="klase" name="klase" required>
+              <option value="">— izvēlieties —</option>
+              <option>4. klase</option>
+              <option>5. klase</option>
+              <option>6. klase</option>
+              <option>7. klase</option>
+              <option>8. klase</option>
+              <option>9. klase</option>
+              <option>10. klase</option>
+              <option>11. klase</option>
+              <option>12. klase</option>
+            </select>
+          </div>
+
+          <div class="lauks">
+            <span class="grupa__nosaukums">Priekšmets</span>
+            <div class="izvele">
+              <label><input type="radio" name="prieksmets" value="Matemātika" required> Matemātika</label>
+              <label><input type="radio" name="prieksmets" value="Fizika"> Fizika</label>
+              <label><input type="radio" name="prieksmets" value="Ķīmija"> Ķīmija</label>
+              <label><input type="radio" name="prieksmets" value="Programmēšana"> Programmēšana</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mērķis</legend>
+
+          <div class="lauks">
+            <span class="grupa__nosaukums">Ko vēlaties sasniegt?
+              <span class="paskaidre">Var atzīmēt vairākus.</span>
+            </span>
+            <div class="izvele">
+              <label><input type="checkbox" name="merkis" value="Uzlabot atzīmes"> Uzlabot atzīmes</label>
+              <label><input type="checkbox" name="merkis" value="Sagatavoties pārbaudes darbam"> Pārbaudes darbs</label>
+              <label><input type="checkbox" name="merkis" value="Sagatavoties eksāmenam"> Eksāmens</label>
+              <label><input type="checkbox" name="merkis" value="Apgūt kavēto vielu"> Kavētā viela</label>
+              <label><input type="checkbox" name="merkis" value="Padziļināta apguve"> Padziļināti</label>
+            </div>
+          </div>
+
+          <div class="lauks">
+            <label for="temas">Kuras tēmas sagādā grūtības?
+              <span class="paskaidre">Piemēram: daļskaitļi, kustības uzdevumi, cikli programmēšanā.</span>
+            </label>
+            <textarea id="temas" name="temas"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Laiks</legend>
+
+          <div class="lauks">
+            <span class="grupa__nosaukums">Kad varētu notikt nodarbības?
+              <span class="paskaidre">Darbdienās sākam pēc 16:00.</span>
+            </span>
+            <div class="izvele">
+              <label><input type="checkbox" name="laiks" value="Darbdienās pēc 16:00"> Darbdienās pēc 16:00</label>
+              <label><input type="checkbox" name="laiks" value="Sestdienās"> Sestdienās</label>
+              <label><input type="checkbox" name="laiks" value="Svētdienās"> Svētdienās</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Saziņa</legend>
+
+          <div class="lauks">
+            <label for="epasts">E-pasts</label>
+            <input type="email" id="epasts" name="epasts" autocomplete="email" required>
+          </div>
+        </fieldset>
+
+        <div class="pogas">
+          <button type="submit" class="poga">Iesniegt anketu</button>
+        </div>
+
+        <p class="zinojums" id="zinojums" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- <section class="bloks">
+    <div class="zime mono"><span>Pēc tam</span></div>
+    <div>
+      <h2>Kas notiek pēc anketas</h2>
+      <ol class="soli">
+        <li class="solis-rinda">
+          <div><h3>Atbilde vienas darbdienas laikā</h3><p>E-pastā vai WhatsApp — kā jums ērtāk.</p></div>
+        </li>
+        <li class="solis-rinda">
+          <div><h3>Piedāvājam laiku un pasniedzēju</h3><p>Kopā ar cenu tieši jūsu klasei un priekšmetam.</p></div>
+        </li>
+        <li class="solis-rinda">
+          <div><h3>Atsūtām Google Meet saiti</h3><p>Pirmā 60 minūšu nodarbība — bez maksas.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section> -->
+
+</main>
+
+<footer class="kajene">
+  <div class="ietvars kajene__saturs">
+    <p><span data-vards>Rūtiņa</span> — privātstundas tiešsaistē</p>
+    <p><a href="mailto:infoskola11@gmail.com">infoskola11@gmail.com</a> 
+      <!-- &middot; <a href="tel:+37120000000">+371 20 000 000</a> -->
+    </p>
+  </div>
+</footer>
+
+<script src="nosaukums.js"></script>
+<script src="skripts.js"></script>
+</body>
+</html>
